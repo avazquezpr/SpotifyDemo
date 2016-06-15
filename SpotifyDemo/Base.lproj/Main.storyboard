@@ -1,25 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DXz-tV-iiP">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="Ogi-RM-xui">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DXz-tV-iiP" customClass="ViewController" customModule="SpotifyDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="Zbx-Bh-Qio"/>
+                        <viewControllerLayoutGuide type="bottom" id="0ak-Jt-8EK"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="BkP-h7-5QI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdB-Qw-Fsj">
+                                <rect key="frame" x="227.5" y="258" width="145" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginWithSpotify:" destination="DXz-tV-iiP" eventType="touchUpInside" id="DSD-ui-T9y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JdB-Qw-Fsj" firstAttribute="centerX" secondItem="BkP-h7-5QI" secondAttribute="centerX" id="1l3-BA-axk"/>
+                            <constraint firstItem="JdB-Qw-Fsj" firstAttribute="centerY" secondItem="BkP-h7-5QI" secondAttribute="centerY" id="jWa-PN-gg3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="kI8-ec-XXs" kind="show" identifier="NowPlayingSegue" id="Wsb-78-zRU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dqn-Jk-onZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="241" y="168"/>
+        </scene>
+        <!--Now Playing View Controller-->
+        <scene sceneID="1DW-3b-tIg">
+            <objects>
+                <viewController id="kI8-ec-XXs" customClass="NowPlayingViewController" customModule="SpotifyDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nPd-78-9RX"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ud5-Ud-fnz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cnz-gM-c0U">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Now Playing :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yr-tg-Zgz">
+                                <rect key="frame" x="143.5" y="270.5" width="313.5" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7Yr-tg-Zgz" firstAttribute="centerX" secondItem="cnz-gM-c0U" secondAttribute="centerX" id="hKD-Nb-qpv"/>
+                            <constraint firstItem="7Yr-tg-Zgz" firstAttribute="centerY" secondItem="cnz-gM-c0U" secondAttribute="centerY" id="hu5-6J-ygS"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XEN-Fh-7Kf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="241" y="957"/>
         </scene>
     </scenes>
 </document>

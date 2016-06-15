@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E7DE6B261C87EC7800DC731E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DE6B251C87EC7800DC731E /* AppDelegate.swift */; };
+		E7C7C92F1C88052D00F79180 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DE6B251C87EC7800DC731E /* AppDelegate.swift */; };
+		E7CF0C5D1D1142A100E099A5 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CF0C5C1D1142A100E099A5 /* NowPlayingViewController.swift */; };
 		E7DE6B281C87EC7800DC731E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DE6B271C87EC7800DC731E /* ViewController.swift */; };
 		E7DE6B2B1C87EC7800DC731E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7DE6B291C87EC7800DC731E /* Main.storyboard */; };
 		E7DE6B2D1C87EC7800DC731E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7DE6B2C1C87EC7800DC731E /* Assets.xcassets */; };
 		E7DE6B301C87EC7800DC731E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7DE6B2E1C87EC7800DC731E /* LaunchScreen.storyboard */; };
+		E7DE6B381C87EC9C00DC731E /* Spotify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DE6B371C87EC9C00DC731E /* Spotify.framework */; };
+		E7DE6B3B1C87EE5600DC731E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DE6B3A1C87EE5600DC731E /* AVFoundation.framework */; };
+		E7DE6B3D1C87EE6500DC731E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DE6B3C1C87EE6500DC731E /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E7CF0C5C1D1142A100E099A5 /* NowPlayingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 		E7DE6B221C87EC7800DC731E /* SpotifyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotifyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7DE6B251C87EC7800DC731E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7DE6B271C87EC7800DC731E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,10 @@
 		E7DE6B2C1C87EC7800DC731E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7DE6B2F1C87EC7800DC731E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7DE6B311C87EC7800DC731E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7DE6B371C87EC9C00DC731E /* Spotify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Spotify.framework; sourceTree = "<group>"; };
+		E7DE6B3A1C87EE5600DC731E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E7DE6B3C1C87EE6500DC731E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E7DE6B3E1C87EFA600DC731E /* SpotifyDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpotifyDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7DE6B3D1C87EE6500DC731E /* SystemConfiguration.framework in Frameworks */,
+				E7DE6B3B1C87EE5600DC731E /* AVFoundation.framework in Frameworks */,
+				E7DE6B381C87EC9C00DC731E /* Spotify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,14 +66,27 @@
 		E7DE6B241C87EC7800DC731E /* SpotifyDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E7DE6B3E1C87EFA600DC731E /* SpotifyDemo-Bridging-Header.h */,
 				E7DE6B251C87EC7800DC731E /* AppDelegate.swift */,
 				E7DE6B271C87EC7800DC731E /* ViewController.swift */,
 				E7DE6B291C87EC7800DC731E /* Main.storyboard */,
+				E7CF0C5C1D1142A100E099A5 /* NowPlayingViewController.swift */,
 				E7DE6B2C1C87EC7800DC731E /* Assets.xcassets */,
 				E7DE6B2E1C87EC7800DC731E /* LaunchScreen.storyboard */,
 				E7DE6B311C87EC7800DC731E /* Info.plist */,
+				E7DE6B391C87ECA700DC731E /* Frameworks */,
 			);
 			path = SpotifyDemo;
+			sourceTree = "<group>";
+		};
+		E7DE6B391C87ECA700DC731E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7DE6B3C1C87EE6500DC731E /* SystemConfiguration.framework */,
+				E7DE6B3A1C87EE5600DC731E /* AVFoundation.framework */,
+				E7DE6B371C87EC9C00DC731E /* Spotify.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -97,6 +122,11 @@
 					E7DE6B211C87EC7800DC731E = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = E5K76XCPJE;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -136,8 +166,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7C7C92F1C88052D00F79180 /* AppDelegate.swift in Sources */,
+				E7CF0C5D1D1142A100E099A5 /* NowPlayingViewController.swift in Sources */,
 				E7DE6B281C87EC7800DC731E /* ViewController.swift in Sources */,
-				E7DE6B261C87EC7800DC731E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +214,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -227,6 +259,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -248,10 +281,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SpotifyDemo",
+				);
 				INFOPLIST_FILE = SpotifyDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nutdesigns.SpotifyDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpotifyDemo/SpotifyDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -259,10 +303,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SpotifyDemo",
+				);
 				INFOPLIST_FILE = SpotifyDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nutdesigns.SpotifyDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SpotifyDemo/SpotifyDemo-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -285,6 +339,7 @@
 				E7DE6B361C87EC7800DC731E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
