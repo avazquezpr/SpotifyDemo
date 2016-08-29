@@ -16,10 +16,10 @@ class ViewController: UIViewController, SPTAuthViewDelegate, SPTAudioStreamingPl
     /*
     * NOTE - Try making a demo project using your info
     */
-    let kClientID = "067c71349027463b89648f7ac37565f5"
-    let kCallbackURL = "spotify-demo://hello"
-    let kTokenSwapURL = "http://localhost:1234/swap"
-    let kTokenRefreshURL = "http://localhost:1234/refresh"
+    let kClientID = "" // Your client ID
+    let kCallbackURL = "" // Your callback URL
+    let kTokenSwapURL = ""  // Your token swap URL
+    let kTokenRefreshURL = "" // Your token refresh URL
     
     // Spotify Setup
     var player = SPTAudioStreamingController?()
